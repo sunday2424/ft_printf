@@ -1,8 +1,26 @@
 # ft_printf
 
-%[flags][width][.precision][length]conversions
+%[flag][min width][precision][length modifier][conversion specifier]
 
 % -> flags (#, 0, -, +, ' ') -> minw (* || 1-9) -> precision (. && (* || 1-9)) -> length (hh, h, l, ll) -> conversions (cspdiouxXf%)
+
+conversions:
+%i : integar (base 10)
+%d : decimal (integar) number (base 10)
+%s : string of characters
+%p : pointer address
+%f : floating-point number
+%o : octal bumber (base 8)
+%u : unsigned decimal (integar) number
+%x %X : number in hexadecimal (base 16)
+%% : print a precent sign
+
+flags:
+'-' : creates a left justifying printf output
+'0' : integar zero-fill, left-pads the number with zeros instead of spaces
+'+' : means when used it will print a plus sign before the output
+'#' : Used with the specifiers the value is precceeded with 0, 0x or 0X for values different than 0
+' ': If no sign is going to be written, a blank space is inserted before the value.
 
 s
 flags: - : left align
